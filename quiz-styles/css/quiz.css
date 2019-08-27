@@ -1,0 +1,187 @@
+.quiz-preamble {
+    padding-top: 45px;
+}
+
+.quiz-container {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 42px;
+    padding-top: 5px;
+    background-color: #ececec;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.quiz-header {
+    text-align: center;
+    font-size: 150%;
+    color: #ece8e8;
+    font-weight: bold;
+    background-color: #176696;
+    padding: 18px;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.quiz-results-container {
+    display: none;
+    font-size: 170%;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    padding: 7px;
+}
+
+.quiz-results-container .fa-trophy {
+    padding-right: 18px;
+    font-size: 30px;
+}
+
+.quiz-mcq {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 42px;
+    box-shadow: 0 0 4px 0 rgba(17,22,26,.16),0 2px 4px 0 rgba(17,22,26,.08),0 4px 8px 0 rgba(17,22,26,.08);
+    margin-bottom: 50px;
+}
+
+/* The label container */
+.choice label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 122%;
+    color: grey;
+}
+
+.choice label * {
+    display:inline;
+}
+
+/* Hide the browser's default radio button */
+.choice label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.choice label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.choice label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.choice label input:checked ~ .checkmark {
+    background-color: #176696;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.choice label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.choice label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.choice label .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+} 
+
+.quiz-mcq .explanation {
+    display: none;
+    margin-top: 15px;
+    margin-bottom: -65px;
+}
+
+.quiz-mcq .explanation .artfct-cnt {
+    position: relative;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.quiz-mcq .explanation .box-txt {
+    background-color: #ecfad1 !important;
+}
+
+.quiz-mcq .explanation .box-inner * {
+    color: black;
+}
+
+.submit-btn {
+    margin: 10px;
+}
+
+.reset-btn {
+    margin: 10px;
+}
+
+.disable-btn {
+   cursor: not-allowed;
+   pointer-events: none;
+   opacity: 0.5;
+}
+
+.disable-choices {
+   cursor: not-allowed;
+   pointer-events: none;
+}
+
+.fa-check, .fa-close {
+    visibility: hidden;
+    font-size: 20px;
+}
+
+.fa-check {
+    color: #2ba62b;    
+}
+
+.fa-close {
+    color: #e35a5a;
+}
+
+.correct, .incorrect {
+    position: relative;
+    margin-top: -40px;
+    font-size: 89%;
+    float: right;
+    color: black;
+}
+
+.correct {
+    color: #588e1e;
+}
+
+.incorrect {
+    color: red;
+}
+
+.quiz-preamble .artfct-cnt {
+    min-height: inherit !important;
+}
+
+.explanation .artfct-cnt {
+    min-height: inherit !important;
+}

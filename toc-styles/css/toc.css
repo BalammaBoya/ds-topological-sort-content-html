@@ -1,0 +1,116 @@
+.toc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #f8f8f8;
+    border-right: 1px solid #dad9d9;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.toc-header {
+    cursor: pointer;
+    height: 78.5px;
+    color: #176696;
+    font-size: 165%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fafafa;
+    border-bottom: 3px solid #dad9d9;
+}
+
+.toc-header .title {
+    position: relative;
+    top: 29%;
+}
+
+.toc-header .glyphicon-remove {
+    top: 33%;
+    left: -30%;
+}
+
+.toc .exp-preamble {
+   border-bottom: 2px solid #dad9d9;
+   height: 64.5px;
+}
+
+.toc .exp-preamble a {
+    display: block;
+    font-size: 140%;
+    font-weight: bold;
+    color: black;
+    padding: 19px 21px 15px 11px;
+}
+
+.toc .exp-preamble:hover {
+    background-color: #ececec;
+}
+
+.toc ul {
+    list-style-type: none;
+}
+
+.toc-lu-ul {
+    margin: 0;
+    padding: 0;
+}
+
+.toc-lu-li {
+    background-color: transparent;
+    border: 1px solid #edeaea !important;
+    margin-bottom: 0px;
+}
+
+.toc ul li a {
+    padding: 10px;
+    display: block;
+}
+
+.toc ul li a:hover {
+    color: #162a44;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.toc-lu-li a {
+    font-size: 135%;
+    color: black;
+}
+
+/* .toc-lu-li a[data-toggle="collapse"]:after { */
+/*     font-family: "Glyphicons Halflings"; */
+/*     content:"\e252"; */
+/*     float: right; */
+/*     font-size: 83%; */
+/*     transition:  0.6s ease-out; */
+/*     /\* -webkit-transition: 0.6s ease-out; *\/ */
+/*     /\* -moz-transition:  0.6s ease-out; *\/ */
+/* } */
+
+/* .toc-lu-li a[aria-expanded="true"]:after { */
+/*     transform: rotate(180deg); */
+/*     /\* -webkit-transform: rotate(180deg); *\/ */
+/*     /\* -moz-transform: rotate(180deg); *\/ */
+/* } */
+
+.toc-lu-li .glyphicon-triangle-bottom {
+    float: right;
+    font-size: 16px;
+}
+
+.toc-tsk-li a, .toc-quiz-li a {
+    font-size: 120%;
+    color: #474545;
+}
+
+.toc-tsk-ul, .toc-quiz-ul {
+    background-color: rgb(242, 240, 240);
+}
+
+.toc-active-el {
+    background-color: #fff;
+    font-weight: bold;
+    border-bottom: 3px solid #176696;
+}

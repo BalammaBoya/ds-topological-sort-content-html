@@ -1,0 +1,28 @@
+{
+"js": {
+  "jquery"  :  "libs/jquery-1.12.0.min.js",
+  "utils" : "js/utils.js",
+  "bootstrap" : "libs/bootstrap-3.3.7/dist/js/bootstrap.min.js",
+  "apis"  :  "js/exp-dom.js",
+  "artefacts-path": "js/artefacts-path.js",
+  "realization": "http://localhost:8001/build/code/runtime/js/realization.js", 
+  "layoutRenderer" : "js/layout.js",
+  "headerRenderer" : "js/header.js",
+  "tocRenderer" : "js/toc.js",
+  "contentRenderer" : "js/content.js",
+  "artefactsRenderer" : "js/artefacts.js",
+  "quizRenderer" : "js/quiz.js",
+  "quizValidator": "js/quiz-validation.js"
+},
+
+ "css" : {
+   "bootstrap" : "libs/bootstrap-3.3.7/dist/css/bootstrap.min.css",
+   "fontawesome" : "libs/font-awesome-4.7.0/css/font-awesome.css",
+   "common"    : "common-styles/css/common.css",
+   "header"    : "header-styles/css/header.css",
+   "toc"       : "toc-styles/css/toc.css",
+   "content"   : "content-styles/css/content.css",
+   "artefacts"   : "artefacts-styles/css/artefacts.css",
+   "quiz"      : "quiz-styles/css/quiz.css"
+ }
+}

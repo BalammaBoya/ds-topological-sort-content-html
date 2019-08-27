@@ -1,0 +1,100 @@
+.header {
+    background-color: #fafafa;
+    position: fixed;
+    min-height: 76px;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0 16px;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header .navbar {
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.header .navbar .container-fluid {
+    padding: 0;
+}
+
+.header .toc-menu {
+    position: relative;
+    font-size: 24px !important;
+    padding: 16px 18px;
+    color: black;
+    float: left;
+    cursor: pointer;
+    transition: all 0.1s;
+    margin-top: 9px;
+}
+
+.header .toc-menu:hover {
+    background-color: #e7e7e7;
+    border-radius: 50%;
+    color: black;
+}
+
+.header .logo-link {
+    position: relative;
+    display: block;
+    max-width: 91px;
+    margin-top: 12px;
+    margin-left: 14px;
+    float: left;
+} 
+
+.header .vlabs-logo {
+    float: left;
+    width: 100%;
+}
+
+.header .exp-title {
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    position: absolute;
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 38px;
+    margin-bottom: 23px;
+    color: #000;
+    left: 50%;
+}
+
+.header .social-handlers {
+    list-style-type: none;
+    float: right;
+    padding: 28px 0;
+    margin: 0;
+}
+
+.header .social-handlers li {
+    display: inline;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.header .social-handlers li:hover {
+    opacity: 0.6;
+}
+
+.fa-gitlab {
+    color: #e24329 !important;
+}
+
+.fa-twitter {
+    color: #38A1F3 !important;
+}
+
+.fa-facebook {
+    color: #3c5a99 !important;
+}
+
+@media screen and (max-width: 600px) {
+    .exp-title {
+        display: none !important;
+    }
+}

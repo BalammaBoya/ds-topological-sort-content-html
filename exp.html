@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Topological Sort Experiment</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <style>
+        .exp {
+            display: none;
+        }
+        
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #2780C6;
+            text-align: center;
+            color: #fff;
+        }
+        
+        #headings {
+            background-color: #2780C6;
+            text-align: center;
+            color: #fff;
+        }
+        
+        td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: center;
+            height: 20px;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="exp" title="Topological Sort Experiment">
+        <div class="longt">
+            <h1 class="hlongt">Introduction to Topological Sorting</h1>
+        </div>
+        <div class="preamble">
+            <div class="art txt" title="Estimation">
+                <div class="longt">
+                    <h2 class="hlongt">Estimated Time</h2>
+                </div>
+                <div class="art-body">
+                    <p>1 hour</p>
+                </div>
+            </div>
+            <div class="art req" title="Topological Sort Introduction">
+                <div class="longt">
+                    <h2 class="hlongt">Introduction</h2>
+                </div>
+                <div class="description">
+                    <p> Introduction video for DAGs and Topological Sort</p>
+                </div>
+            </div>
+            <div class="art txt" title="Prerequisites">
+                <div class="longt">
+                    <h2 class="hlongt">Prerequisites of the Experiment</h2>
+                </div>
+                <div class="art-body">
+                    <p>
+                        This experiment requires you to have basic knowledge about:
+                    </p>
+                    <ul>
+                        <li><a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank">The Notion of Directed Acyclic Graphs</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Time_complexity " target="_blank">Notion of Time and Space Complexity</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" target="_blank">Graphs (Directed and Undirected) and Trees</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Time_complexity" target="_blank">Notion of Time and Space complexity</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Tree_(data_structure)" target="_blank">Notion of Trees and types</a></li>
+                        <li><a href="https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/" target="_blank">Notion of DFS</a></li>
+                    </ul>
+                    <p>And above all, a curiosity to learn and explore!</p>
+                </div>
+            </div>
+            <div class="art txt" title="Overview">
+                <div class="longt">
+                    <h2 class="hlongt">Overview of the Experiment</h2>
+                </div>
+                <div class="art-body">
+                    <ul>
+                        <li>
+                            The aim of this experiment is to understand the Topological Sort algorithms - Depth-first search and Kahn's algorithm along with their time and space complexity.
+                        </li>
+                        <li>
+                            The experiment features a series of modules with video lectures, interactive demonstrations, simulations, hands-on practice exercises and quizzes for self analysis.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="art txt" title="Learning Objectives">
+                <div class="longt">
+                    <h2 class="hlongt">Learning Objectives of the Experiment</h2>
+                </div>
+                <div class="art-body">
+                    <p>In this experiment, we will be able to do the following:</p><br>
+                    <ul>
+                        <li>Given a directed acyclic graph of numbers, generate a topological ordering of numbers by applying the algorithms.
+                        </li>
+                        <li>Demonstrate knowledge of time complexity of both algorithms by counting the number of operations involved in each iteration.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="art txt" title="Modules and Weightage">
+                <div class="longt">
+                    <h2 class="hlongt">Experiment Modules & their Weightage</h2>
+                </div>
+                <div class="art-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="text-align:center">Module</th>
+                                <th style="text-align:center">Weightage</th>
+                                <th style="text-align:center">Expectation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pre-test</td>
+                                <td>10%</td>
+                                <td>Solve All Questions</td>
+                            </tr>
+                            <tr>
+                                <td>Topological Sort: DFS Algorithm</td>
+                                <td>20%</td>
+                                <td>Understand the DFS algorithm</td>
+                            </tr>
+                            <tr>
+                                <td>Topological Sort: Kahn's Algorithm</td>
+                                <td>20%</td>
+                                <td>Understand the Kahn's algorithm</td>
+                            </tr>
+                            <tr>
+                                <td>Analysis</td>
+                                <td>25%</td>
+                                <td>Understand the time and space complexity</td>
+                            </tr>
+                            <tr>
+                                <td>Post-test</td>
+                                <td>25%</td>
+                                <td>Solve all Questions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Pre-test">
+            <div class="longt">
+                <h1 class="hlongt">Pre-test of the Experiment</h1>
+            </div>
+            <div class="preamble">
+                <div class="art txt" title="Estimation">
+                    <div class="longt">
+                        <h2 class="hlongt">Estimated Time</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>10 minutes</p>
+                    </div>
+                </div>
+                <div class="art txt" title="Objectives">
+                    <div class="longt">
+                        <h2 class="hlongt">Instructions for Pre-Test</h2>
+                    </div>
+                    <div class="art-body">
+                        <ul>
+                            <li>Pretest includes questions on
+                                <strong>DAGs, time
+                                    complexity and space
+                                    complexity.</strong>
+                            </li>
+                            <li>If you want to revise these topics before taking the quiz, go through the Recap module first.
+                            </li>
+                            <li>Read the questions in the quiz section and select the correct option from the ones provided. Please note that some
+                                <strong>questions
+                                        may have more than
+                                        one correct
+                                        response.
+                                    </strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Recap">
+                <div class="longt">
+                    <h2 class="hlongt">Quick look at DAGs, Time and Space Complexity</h2>
+                </div>
+                <div class="art txt" title="Trees&graphs">
+                    <div class="longt">
+                        <h2 class="hlongt">Trees and graphs</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>Tree is an abstract data structure that simulates a hierarchical tree structure, with a root and subtrees of children with a parent node, represented as a set of linked nodes. </p>
+                        <p> A graph is a pictorial representation of a set of objects where some pairs of objects are connected by links. The interconnected objects are represented by points termed as <b>vertices</b>, and the links that connect the vertices
+                            are called <b>edges</b>.</p>
+                        <p>Graph with all vertices connectes is a connected graph and a tree that covers all vertices in called spanning tree.</p>
+                        <p>Graphs with edges that have weights are called weighted graphs. Graphs with directions is known as a directed graph.</p>
+                    </div>
+                </div>
+                <div class="art req" title="Trees&graphs Visualization">
+                    <div class="longt">
+                        <h2 class="hlongt">Types of graphs</h2>
+                    </div>
+                    <div class="description">
+                        Picture shows types of graphs
+                    </div>
+                </div>
+                <div class="art txt" title="DFS">
+                    <div class="longt">
+                        <h2 class="hlongt">Depth First Search (DFS)</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>A depth-first search (DFS) is an algorithm for traversing a finite graph. DFS visits the child vertices before visiting the sibling vertices; that is, it traverses the depth of any particular path before exploring its breadth.
+                            A stack (often the program's call stack via recursion) is generally used when implementing the algorithm.</p>
+                    </div>
+                </div>
+                <div class="art txt" title="DAG">
+                    <div class="longt">
+                        <h2 class="hlongt">What is a DAG?</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>A directed acyclic graph (DAG) is a graph that is <strong>directed and without cycles</strong> connecting the other edges. This means that it is impossible to traverse the entire graph starting at one edge. The edges of the directed
+                            graph only go one way.
+                        </p>
+                    </div>
+                </div>
+                <div class="art txt" title="Time and Space Complexity">
+                    <div class="longt">
+                        <h2 class="hlongt">Time and Space Complexity</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>Time complexity of an algorithm gives the measure of time taken by it to run as a function of the length of the input. Similarly, Space complexity of an algorithm quantifies the amount of space or memory taken by an algorithm to
+                            run as a function of the length of the input.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz" title="Pre-test Quiz">
+                <div class="longt">
+                    <h2 class="hlongt">A Quiz with Multiple Choice Questions</h2>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question1">
+                            <div class="art-body">
+                                <p>Q1. Which of these best describe a graph?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c1">
+                                <div class="art-body">
+                                    <p>(A) A linear data structure with finite nodes and edges</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c2">
+                                <div class="art-body">
+                                    <p>(B) A non-linear data structure consisting of nodes and edges</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c3">
+                                <div class="art-body">
+                                    <p>(C) A data structure which has infinite nodes and edges</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c4">
+                                <div class="art-body">
+                                    <p>(D) All of the above</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>A Graph is a non-linear data structure consisting of a finite set of vertices(or nodes) and set of edges which connect a pair of nodes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question2">
+                            <div class="art-body">
+                                <p>Q2. What is the number of edges present in a complete graph having n vertices?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c1">
+                                <div class="art-body">
+                                    <p>(A) (n*(n-1))/2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c2">
+                                <div class="art-body">
+                                    <p>(B) (n*(n+1))/2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c3">
+                                <div class="art-body">
+                                    <p>(C) n</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c4">
+                                <div class="art-body">
+                                    <p>(D) None of these</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>Taking a general example such as inserting into the middle of an array, you have to shift all the elements after that element, so the complexity for insertion in that case is O(n). Worst case would be when you have to insert at
+                                    the starting of the array, when you will need to move n elements
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question3">
+                            <div class="art-body">
+                                <p>Q3. What does it mean when we say that an algorithm X is asymptotically more efficient than Y?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c1">
+                                <div class="art-body">
+                                    <p>(A) X will always be a better choice for small inputs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c2">
+                                <div class="art-body">
+                                    <p>(B) X will always be a better choice for large inputs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c3">
+                                <div class="art-body">
+                                    <p>(C) Y will always be a better choice for small inputs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c4">
+                                <div class="art-body">
+                                    <p>(D) X will always be a better choice for all inputs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>Performance could be similar for small inputs, but definitely better for larger inputs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question4">
+                            <div class="art-body">
+                                <p>Q4. int i, j, k = 0; <br> for (i = n / 2; i &lt;= n; i++){<br> for (j = 2; j &lt;= n; j = j * 2){ <br> k = k + n / 2; }
+                                    <br> }
+                                    <br> What is the time complexity for the above code?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c1">
+                                <div class="art-body">
+                                    <p>(A) O(n)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c2">
+                                <div class="art-body">
+                                    <p>(B) O(N + M) time, O(N + M) space</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c3">
+                                <div class="art-body">
+                                    <p>(C) O(N + M) time, O(1) space</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c4">
+                                <div class="art-body">
+                                    <p>(D) O(N * M) time, O(N + M) space</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>The first loop runs for O(n) time, second loop runs for O(m). Constant extra space is used for 2 variables a and b, hence O(1) space.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Topological Sort">
+            <div class="longt">
+                <h1 class="hlongt">Topological Sort</h1>
+            </div>
+
+            <div class="preamble">
+                <div class="art txt" title="Estimation">
+                    <div class="longt">
+                        <h2 class="hlongt">Estimated Time</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>15 min</p>
+                    </div>
+                </div>
+                <div class="art req" title="Video Demo for Topological Sort">
+                    <div class="longt">
+                        <h2 class="hlongt">Video Demo for Topological Sort</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Demo Video
+                        </p>
+                    </div>
+                </div>
+                <div class="art txt" title="Objectives">
+                    <div class="longt">
+                        <h2 class="hlongt">Learning Objectives of this Module</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>In this module we will learn:</p>
+                        <ul>
+                            <li>What is topological sort?</li>
+                            <li>Why topological sort is applicable for DAG</li>
+                            <li>Topological Sort through DFS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task" title="Basic View">
+                <div class="longt">
+                    <h1 class="hlongt">Basic View</h1>
+                </div>
+
+                <div class="art txt" title="What is Topological Sort?">
+                    <div class="longt">
+                        <h2 class="hlongt">What is Topological Sort?</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>Topological sorting of vertices of a Directed Acyclic Graph is an ordering of the vertices v<sub>1</sub>,v<sub>2</sub>,...,v<sub>n</sub> in such a way, that if there is an edge directed towards vertex v<sub>j</sub> from vertex
+                            v
+                            <sub>i</sub>, then v<sub>i</sub> comes before v<sub>j</sub>. There are multiple topological sortings possible for a graph. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is
+                            a directed acyclic graph (DAG).</p>
+                    </div>
+                </div>
+
+                <div class="art req" title="Example of Topological Sort">
+                    <div class="longt">
+                        <h2 class="hlongt">Example of Topological Sort</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Image for example of topological sort should be displayed here.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="art txt" title="Why topological sort only for DAG?">
+                    <div class="longt">
+                        <h2 class="hlongt">Why topological sort only for DAG?</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>It is clear that a topological ordering is not possible if the graph has a cycle, since for two vertices v and w on the cycle, v precedes w and on contrary even w precedes v, so it is not meaningful to say which preceeds the other.
+                            So topological sorting can be achieved for only directed and acyclic graphs.
+                        </p>
+                        <p><b>A DAG 'G' has at least one vertex with in-degree 0 and one vertex with out-degree 0.</b></p>
+                        <p><b>Proof:</b> A DAG does not contain a cycle which means that all paths will be of finite length. Now let S be the longest path from u(source) to v(destination). Since S is the longest
+                            path there can be with no incoming edge to u and no outgoing edge from v, if this situation had occurred then S would not have been the longest path => indegree(u) = 0 and outdegree(v) = 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Through DFS">
+                <div class="longt">
+                    <h1 class="hlongt">Through DFS</h1>
+                </div>
+
+                <div class="art txt" title="Algorithm">
+                    <div class="longt">
+                        <h2 class="hlongt">Algorithm</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>We can modify DFS to find Topological Sorting of a graph. In DFS, we start from a vertex, we first print it and then recursively call DFS for its adjacent vertices. In topological sorting, we use a temporary stack. We don’t print
+                            the vertex immediately, we first recursively call topological sorting for all its adjacent vertices, then push it to a stack. Finally, print contents of stack. Note that a vertex is pushed to stack only when all of its adjacent
+                            vertices (and their adjacent vertices and so on) are already in stack.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="art req" title="Step-wise Representation of finding topological sort through DFS">
+                    <div class="longt">
+                        <h2 class="hlongt">Step-wise Representation of finding topological sort through DFS</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Image showing Step-wise Representation of finding topological sort through DFS should be displayed here.
+                        </p>
+                    </div>
+                </div>
+                <div class="art req" title="Video Demo for topological sort through DFS">
+                    <div class="longt">
+                        <h2 class="hlongt">Video Demo for topological sort through DFS</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Demo Video
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Kahn's Algorithm">
+            <div class="longt">
+                <h1 class="hlongt">Kahn's Algorithm</h1>
+            </div>
+
+            <div class="preamble">
+                <div class="art txt" title="Estimation">
+                    <div class="longt">
+                        <h2 class="hlongt">Estimated Time</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>15 min</p>
+                    </div>
+                </div>
+                <div class="art req" title="Video Demo for Kahn's Algorithm">
+                    <div class="longt">
+                        <h2 class="hlongt">Video Demo for Kahn's Algorithm</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Demo Video
+                        </p>
+                    </div>
+                </div>
+                <div class="art txt" title="Objectives">
+                    <div class="longt">
+                        <h2 class="hlongt">Learning Objectives of this Module</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>In this module we will learn what Kahn's algorithm is and how to implement it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Basic Concept">
+                <div class="longt">
+                    <h1 class="hlongt">Basic Concept</h1>
+                </div>
+
+                <div class="art txt" title="Algorithm">
+                    <div class="longt">
+                        <h2 class="hlongt">Algorithm</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>Steps involved in finding the topological ordering of a DAG:<br></p>
+                        <ul>
+                            <li><b>Step-1:</b> Compute in-degree (number of incoming edges) for each of the vertex present in the DAG and initialize the count of visited nodes as 0.</li>
+
+                            <li><b>Step-2:</b> Pick all the vertices with in-degree as 0 and add them into a queue (Enqueue operation)</li>
+
+                            <li><b>Step-3:</b> Remove a vertex from the queue (Dequeue operation) and then increment count of visited nodes by 1. Decrease in-degree by 1 for all its neighbouring nodes. If in-degree of a neighbouring node is reduced to zero,
+                                then add it to the queue.</li>
+
+                            <li><b>Step 4:</b> Repeat Step 3 until the queue is empty.</li>
+
+                            <li><b>Step 5:</b> If count of visited nodes is not equal to the number of nodes in the graph, then the topological sort is not possible for the given graph.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="art req" title="Step-wise Representation of Kahn's Algorithm">
+                    <div class="longt">
+                        <h2 class="hlongt">Step-wise Representation of Kahn's Algorithm</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Image showing Step-wise Representation of Kahn's Algorithm should be displayed here.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="art txt" title="What is indegree and how to find it?">
+                    <div class="longt">
+                        <h2 class="hlongt">What is indegree and how to find it?</h2>
+                    </div>
+                    <div class="art-body">
+                        <p><b>What is meant by indegree?</b></p>
+                        <p>It is simply the count of number of edges pointed towards the vertex from other vertices.</p>
+                        <p><b>How to find indegree?</b></p>
+                        <p>
+                            Traverse the array of edges and simply increase the counter of the destination node by 1.<br> Algo:
+                            <br> for each node in Nodes<br> &nbsp; indegree[node] = 0;<br> for each edge(src,dest) in Edges<br> &nbsp; indegree[dest]++;
+                        </p>
+                    </div>
+                </div>
+
+                <div class="art req" title="Video Demo for Kahn's Algorithm">
+                    <div class="longt">
+                        <h2 class="hlongt">Video Demo for Kahn's Algorithm</h2>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Demo Video
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Kahn's Algorithm: Demo">
+                <div class="longt">
+                    <h2 class="hlongt">Kahn's Algorithm: Demo</h2>
+                </div>
+                <div class="art req" title="Kahn's Algorithm Demo">
+                    <div class="longt">
+                        <h2 class="hlongt">Kahn's Algorithm Demo</h2>
+                    </div>
+                    <div class="description">
+                        <p>Requires Demo Artefact</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Kahn's Algorithm: Practice">
+                <div class="longt">
+                    <h2 class="hlongt">Kahn's Algorithm: Practice</h2>
+                </div>
+                <div class="art req" title="Kahn's Algorithm Practice">
+                    <div class="longt">
+                        <h2 class="hlongt">Kahn's Algorithm Practice</h2>
+                    </div>
+                    <div class="description">
+                        <p>Recquires Practice Artefact</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Kahn's Algorithm: Exercise">
+                <div class="longt">
+                    <h2 class="hlongt">Kahn's Algorithm: Exercise</h2>
+                </div>
+                <div class="art req" title="Kahn's Algorithm Exercise">
+                    <div class="longt">
+                        <h2 class="hlongt">Kahn's Algorithm Exercise</h2>
+                    </div>
+                    <div class="description">
+                        <p>Recquires Exercise Artefact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Analysis">
+            <div class="longt">
+                <h2 class="hlongt">Analysis of Topological Sort</h2>
+            </div>
+            <div class="preamble">
+                <div class="art txt" title="Estimation">
+                    <div class="longt">
+                        <h2 class="hlongt">Estimated Time</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>10 minutes</p>
+                    </div>
+                </div>
+                <div class="art req" title="Vide Demo for Analysis of Topological Sort">
+                    <div class="longt">
+                        <h2 class="hlongt">Vide Demo for Analysis of Topological Sort</h2>
+                    </div>
+                    <div class="description">
+                        <p>Time complexity of Topological sort is explained</p>
+                    </div>
+                </div>
+                <div class="art txt" title="Objectives">
+                    <div class="longt">
+                        <h2 class="hlongt">Learning Objectives of this Module</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>In this module, we will be learning about :</p>
+                        <p><b>Time and Space Complexity</b> : We will learn about the running time of one iteration, and then extend it to N iterations to complete the sorting process.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="task" title="Time and Space Complexity">
+                <div class="longt">
+                    <h2 class="hlongt">Time and Space Complexity of Topological Sort</h2>
+                </div>
+                <div class="art txt" title="Time Complexity">
+                    <div class="longt">
+                        <h2 class="hlongt">Running Time of Topological Sort</h2>
+                    </div>
+                    <div class="art-body">
+                        <p><b>Time complexity for Kahn's Algorithm:</b></p>
+                        <p>Lets assume that we are ordering a graph with <b>V</b> vertices and <b>E</b> edges using Topological Sort.
+                        </p>
+                        <ul>
+                            <li>
+                                While traversing the nodes, when we come across a node (Let it be <b>X</b>), we need to decrease the indegree of all the nodes which have the edges from the node <b>X</b>. So time complexity for decreasing all the indegree
+                                of the connected nodes is O(|E|).
+                            </li>
+                            <li>
+                                In Topological sort, we run across all edges, which takes O(|V|) time. Hence overall time complexity becomes O(|V|+|E|).
+                            </li>
+                        </ul>
+                        <p><b>Time complexity for Topological Sort through DFS:</b></p>
+                        <p>Since it is modification of DFS, time complexity doesn't alter. Time complexity is O(|V|+|E|).</p>
+                    </div>
+                </div>
+                <div class="art txt" title="Space Complexity">
+                    <div class="longt">
+                        <h2 class="hlongt">Space Complexity of Selection Sort</h2>
+                    </div>
+                    <div class="art-body">
+                        <p><b>Space complexity for Kahn's Algorithm:</b></p>
+                        <p>While enqueuing a node, we need some extra space to store temporary values. Other than that, the ordering can be done in-place. Hence space complexity is <b>O(|V|)</b>.</p>
+                        <p><b>Space complexity for Topological Sort through DFS:</b></p>
+                        <p>Since we need to store the sequence of nodes into a stack, we need some extra space. Other than that, the ordering can be done in-place. Hence space complexity is <b>O(|V|)</b>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Post Test">
+            <div class="longt">
+                <h2 class="hlongt">Post Test of the Experiment</h2>
+            </div>
+            <div class="preamble">
+                <div class="art txt" title="Estimation">
+                    <div class="longt">
+                        <h2 class="hlongt">Estimated Time</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>10 minutes</p>
+                    </div>
+                </div>
+                <div class="art txt" title="Instructions">
+                    <div class="longt">
+                        <h2 class="hlongt">Instructions for Quiz</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>Post Test includes questions on concepts from the entire experiment. Read the questions in the quiz section and select the correct option from the ones provided. Please note that some questions may have more than one correct response.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz" title="Post-test Quiz">
+                <div class="longt">
+                    <h2 class="hlongt">Post test quiz</h2>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question1">
+                            <div class="art-body">
+                                <p>Q1. Which of the following best describes the topological order?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c1">
+                                <div class="art-body">
+                                    <p>(A) If a digraph has no directed cycle it does have a topological order otherwise it might or might not have a topological order</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c2">
+                                <div class="art-body">
+                                    <p>(B) If a digraph has at least one directed cycle it has no topological order otherwise it might or might not have a topological order</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c3">
+                                <div class="art-body">
+                                    <p>(C) A directed graph has a topological order if and only if it has no directed cycle</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c4">
+                                <div class="art-body">
+                                    <p>(D) None of these</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p> As it is explained earlier. Please refer topological sort basic view.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question2">
+                            <div class="art-body">
+                                <p>Q2. Assume you use a digraph to schedule a set of tasks, that have precedence constraints.In such a graph the tasks should be the ________________ and the constraints should be the ______________.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c1">
+                                <div class="art-body">
+                                    <p>(A) vertices,bedges</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c2">
+                                <div class="art-body">
+                                    <p>(B) edges, vertices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c3">
+                                <div class="art-body">
+                                    <p>(C) vertices, vertices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c4">
+                                <div class="art-body">
+                                    <p>(D) edges, edges</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>It is obvious that tasks must be vertices and constraints must be edges, since in order to perform tasks, we need to complete constraints</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question3">
+                            <div class="art-body">
+                                <p>Q3. Topological sort is equivalent to which of the traversals in trees?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c1">
+                                <div class="art-body">
+                                    <p>(A) Pre-order traversal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c2">
+                                <div class="art-body">
+                                    <p>(B) Post-order traversal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c3">
+                                <div class="art-body">
+                                    <p>(C) In-order traversal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q1-c4">
+                                <div class="art-body">
+                                    <p>(D) None of these</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>In pre-order traversal of trees, we process the root first and then the child from left to right.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question4">
+                            <div class="art-body">
+                                <p>Q4. Topological sort of a Directed Acyclic graph is?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c1">
+                                <div class="art-body">
+                                    <p>(A) Always unique</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c2">
+                                <div class="art-body">
+                                    <p>(B) Always Not unique</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c3">
+                                <div class="art-body">
+                                    <p>(C) Sometimes unique and sometimes not unique</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c4">
+                                <div class="art-body">
+                                    <p>(D) None of these</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>As it is explained earlier. Please refer topological sort basic view.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mcq">
+                    <div class="preamble">
+                        <div class="art txt" title="question5">
+                            <div class="art-body">
+                                <p>Q5. Time Complexity of Topological Sorting is? (V – number of vertices, E – number of edges)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c1">
+                                <div class="art-body">
+                                    <p>(A) O(|E|)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c2">
+                                <div class="art-body">
+                                    <p>(B) O(|V|)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="true">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c3">
+                                <div class="art-body">
+                                    <p>(C) O(|V| + |E|)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choice" data-correct="false">
+                        <div class="preamble">
+                            <div class="art txt" title="q2-c4">
+                                <div class="art-body">
+                                    <p>(D) None of these</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <div class="art txt" title="Explanation">
+                            <div class="art-body">
+                                <p>O(|V|+|E|) as it is explained earlier. Please refer topological sort analysis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Feedback">
+            <div class="longt">
+                <h2 class="hlongt">Feedback of the Experiment</h2>
+            </div>
+            <div class="preamble">
+                <div class="art txt" title="Feedback Form">
+                    <div class="longt">
+                        <h2 class="hlongt">Feedback Form of the Experiment</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>The experiment ends here,thanks for participating! Please fill up the form.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lu" title="Further Readings/References">
+            <div class="longt">
+                <h2 class="hlongt">Further Readings and References of the Experiment</h2>
+            </div>
+            <div class="preamble">
+                <div class="art txt" title="Explore">
+                    <div class="longt">
+                        <h2 class="hlongt">Explore More About Topological Sort</h2>
+                    </div>
+                    <div class="art-body">
+                        <p>You can explore more about Topological Sort Experiment through following resources:
+                        </p>
+                        <br>
+                        <b>Useful Links :</b>
+                        <ul>
+                            <li><a href="https://www.cs.usfca.edu/~galles/visualization/TopoSortDFS.html">Topological Sort through DFS Visualisation</a></li>
+                            <li><a href="https://www.cs.usfca.edu/~galles/visualization/TopoSortIndegree.html">Kahn's Algorithm Visualisation</a></li>
+                        </ul>
+                        <b>Quizzes :</b>
+                        <ul>
+                            <li><a href="https://www.sanfoundry.com/data-structure-questions-answers-topological-sorting/">Online Quiz for Topological Sort</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/loader.js"></script>
+</body>
+
+</html>

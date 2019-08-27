@@ -1,0 +1,126 @@
+.content .artfcts-navbar {
+    position: sticky;
+    top: 74px;
+    z-index: 999999999999999;
+}
+
+.content .artfcts-navbar nav {
+    background-color: #176696;
+    box-shadow: 0 0 4px 0 rgba(17,22,26,.16),0 2px 4px 0 rgba(17,22,26,.08),0 4px 8px 0 rgba(17,22,26,.08);
+}
+
+.content .artfcts-navbar nav ul li {
+    padding: 8px;
+}
+
+.content .artfcts-navbar nav ul li a {
+    color: #f3f4f9;
+    font-size: 123%;
+}
+
+.content .artfcts-navbar nav ul a:hover {
+    color: #fff !important;
+    background-color: #3a7ca4 !important;
+    border-radius: 6px !important;
+}
+
+.active-artfct {
+    color: #fff;
+    background-color: #3a7ca4;
+    border-radius: 4px;
+}
+
+.content .artfct-cnt {
+    position: relative;
+    padding-left: 75px;
+    padding-right: 75px;
+    min-height: 6000px;
+}
+
+.artfct-cnt-head {
+    color: #000;
+    font-size: 162%;
+    font-weight: bold;
+}
+
+.box-txt, .box-img, .box-int, .box-unrealized {
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 42px;
+    box-shadow: 0 0 4px 0 rgba(17,22,26,.16),0 2px 4px 0 rgba(17,22,26,.08),0 4px 8px 0 rgba(17,22,26,.08);
+}
+
+.box-txt, .box-img, .box-vid, .box-int, .box-unrealized {
+    margin-bottom: 50px;
+}
+
+.box-int {
+    overflow : auto;
+}
+
+.box-head {
+    color: #176696;
+    font-size: 150%; 
+    font-weight: bold;
+    text-align: justify;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #b6b9b0;
+}
+
+.box-head::before {
+    display: block;
+    content: " ";
+    margin-top: -210px;
+    height: 210px;
+    visibility: hidden;
+}
+
+.box-vid .box-head::before {
+    margin-top: -190px !important;
+    height: 190px !important;
+}
+
+.box-inner {
+    padding-top: 11px;
+}
+
+.box-txt .box-inner {
+    color: grey;
+    font-size: 150%;
+    text-align: justify;
+}
+
+.box-vid .box-inner {
+    padding: 35px;
+    background-color: #f7f7f7;
+}
+
+.box-int .box-inner iframe {
+    width:100%;
+    height: 100vh;
+    border: 0;
+}
+
+.box-inner iframe {
+    width:100%;
+    height: 55vh;
+    border: 0;
+}
+
+.box-vid .box-inner video {
+    width:100%;
+}
+
+.box-inner img {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+.box-unrealized {
+    background-color: #f1d1d1;
+}
+
+.box-unrealized .box-inner {
+    font-size : 20px;
+}
